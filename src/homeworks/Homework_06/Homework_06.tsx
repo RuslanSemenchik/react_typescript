@@ -15,7 +15,7 @@ const cars: Car [] = [ { brand: "BMW", price: 20000, isDiesel: true }, { brand: 
     return (
     <div className="homework_06_page_wrapper">
          
-        {cars.map((car) => (
+        {cars.map((car: Car) => (
           <CardAuto
           brand={car.brand}
           price={car.price}
