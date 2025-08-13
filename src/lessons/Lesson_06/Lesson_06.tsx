@@ -157,8 +157,7 @@ function Lesson_06() {
 
   return (
     <div className="lesson_06_page_wrapper">
-      Lesson 06
-      {userFullName}
+      
     </div>
   );
 }
