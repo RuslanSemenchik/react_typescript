@@ -94,18 +94,18 @@ function Lesson_07() {
 
  const [count, setCount] = useState<number>(0);
 
-  const onMinus = () => {
+  const onMinus = () :void => {
     // Тут пишем логику по уменьшению значения счетчика на 1
       
-      setCount((prevValue:number) => {
+      setCount((prevValue:number):number => {
       console.log(prevValue);
       return prevValue - 1;
     });
   };
-  const onPlus = () => {
+  const onPlus = () : void => {
     // Тут пишем логику по увеличению значения счетчика на 1
       
-      setCount((prevValue:number ) => {
+      setCount((prevValue:number ):number => {
       console.log(prevValue);
       return prevValue + 1;
     });
