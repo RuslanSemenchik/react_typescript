@@ -1,15 +1,16 @@
-import './styles.css'
+
+import{InputContainer,LoginFormLabel,LoginFormInputContainer} from  "./styles"
 import { type InputProps } from './types';
 function Input({id , name = "",type = "", placeholder = "Enter your...",label}: InputProps){
-    return <div className="loginForm_input_container" >
+    return <LoginFormInputContainer >
     
-            <label className="loginForm_label" htmlFor={id}>{label}</label>
-            <input className="input_component"
+            <LoginFormLabel htmlFor={id}>{label}</LoginFormLabel>
+            <InputContainer
             id={id}
             name= {name}
             type= {type}
             placeholder= {placeholder}
           />  
-           </div>
+           </LoginFormInputContainer>
 }
 export default Input;

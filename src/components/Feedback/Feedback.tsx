@@ -2,25 +2,25 @@ import { useState } from "react";
 
 import Button from "components/Button/Button"
 import {type FeedbackProps} from  "./types"
-import "./styles.css";
+import{FeedbackWrapper,FeedbackControl,ButtonCountContainer,FeedbackCount,}from "./styles";
 
 function Feedback({like, dislike, onLike, onDislike, resetResults}:FeedbackProps) {
  
 
   return (
-    <div className="feedback-wrapper">
-      <div className="feedback-control">
-        <div className="buttonwithcount-container">
+    <FeedbackWrapper>
+      <FeedbackControl>
+        <ButtonCountContainer>
           <Button buttonName="Like" onClick={onLike} />
-          <p className="count">{like}</p>
-        </div>
-        <div className="buttonwithcount-container">
+          <FeedbackCount>{like}</FeedbackCount>
+        </ButtonCountContainer>
+        <ButtonCountContainer>
           <Button buttonName="Dislike" onClick={onDislike} />
-          <p className="count">{dislike}</p>
-        </div>
-      </div>
+          <FeedbackCount>{dislike}</FeedbackCount>
+        </ButtonCountContainer>
+      </FeedbackControl>
       <Button buttonName="Reset Results" onClick={resetResults} />
-    </div>
+    </FeedbackWrapper>
   );
 }
 

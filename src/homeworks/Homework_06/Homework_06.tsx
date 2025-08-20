@@ -1,5 +1,5 @@
 import{ type Car} from "./types";
-import CardAuto from "../../components/CardAuto/CardAuto";
+import CardAuto from "components/CardAuto/CardAuto";
 import "./styles.css";
 import { v4 } from "uuid";
 // import {type ReactNode } from "react";

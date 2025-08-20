@@ -1,7 +1,29 @@
 import styled from "@emotion/styled";
 
-export const CardAutoStyle = styled.div`
+
+export const CardAutoComponent = styled.div`
+display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+  width:300px;
+  min-height: 300px;
+  max-height: fit-content;
+  border: 2px solid rgb(5, 36, 42);
+  padding: 30px;
+  border-radius: 6px;
+  background-color: rgb(227, 237, 237);
 
 
+`
+export const CardTitle = styled.span`
+  font-size: 26px;
+  color: rgb(18, 109, 162);
+  font-weight: bold;
+
+`
+export const CardInfo = styled.p`
+  font-size: 24px;
+  color: black;
 
 `

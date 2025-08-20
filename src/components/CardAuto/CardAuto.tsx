@@ -1,5 +1,6 @@
 
 import './styles.css'
+import {CardAutoComponent,CardTitle,CardInfo} from "./styles";
 
 interface CarComponent{
      brand: string;
@@ -13,24 +14,24 @@ function CardAuto (
   
   ) {
   return (
-    <div className="cardAuto_components">
+    <CardAutoComponent>
 
-        <p className="card_info">
-        <span className="card_title">Brand: </span>
+        <CardInfo>
+        <CardTitle>Brand: </CardTitle>
         {brand}
-      </p>
+      </CardInfo>
       
-      <p className="card_info">
-        <span className="card_title">Price: </span>
+      <CardInfo>
+        <CardTitle>Price: </CardTitle>
         {price}
-      </p>
+      </CardInfo>
       
-      <p className="card_info">
-        <span className="card_title">IsDiesel: </span>
+      <CardInfo>
+        <CardTitle>IsDiesel: </CardTitle>
         {isDiesel ? "Yes" : "No"}
-      </p>
+      </CardInfo>
     
-    </div>
+    </CardAutoComponent>
   );
 }
 
