@@ -1,4 +1,8 @@
 import { Global, css } from "@emotion/react";
+
+
+
+const isBlack = false;
 const globalAppStyles = css`
   * {
     box-sizing: border-box;
@@ -22,6 +26,7 @@ const globalAppStyles = css`
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    background-color: ${ isBlack ? "black" : "white" };
   }
 `;
 function GlobalStyles() {
