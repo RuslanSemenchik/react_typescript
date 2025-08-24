@@ -45,14 +45,14 @@ return <PageWrapper>
         placeholder="disabled"
         disabled = {true}
         
+        
         />
 
-        
         <Input
-        id="first"
-        name="input_01"
-        label="disabled"
-        placeholder="disabled"
+        id="second"
+        name="input_02"
+        label="error"
+        placeholder="error"
         error= "Some error"
         
 />

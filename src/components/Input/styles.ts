@@ -25,8 +25,8 @@ const generateInput = (disabled: boolean|undefined, error: string|undefined) => 
 //   };
 
 
- export const InputContainer = styled.input<InputErrorProps>`
- display: flex;
+export const InputContainer = styled.input<InputErrorProps>`
+display: flex;
 flex-direction: column;
 justify-content: center;
 outline : none;
@@ -53,6 +53,7 @@ font-size: 16px;
   flex-direction: column;
   gap: 4px;
   height: 68px;
+
   `
 
   
