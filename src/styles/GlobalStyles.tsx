@@ -29,6 +29,7 @@ const globalAppStyles = css`
     background-color: ${ isBlack ? "black" : "white" };
   }
 `;
+
 function GlobalStyles() {
   return <Global styles={globalAppStyles} />;
 }

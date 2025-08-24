@@ -1,11 +1,36 @@
 import styled from "@emotion/styled";
 
- export const InputContainer = styled.input`
+
+interface InputErrorProps {
+    $error : string | undefined;
+}
+
+const generateInput = (disabled: boolean|undefined, error: string|undefined) => {
+  if (disabled) {
+    return "#acacacff";
+  } else if (error === "Some error") {
+    return "red";
+  } else {
+     return " rgba(63, 63, 63, 1)"  
+    }
+  };
+
+// const generateInputError = (error : string|undefined) => {
+//   if (error === "Some error") {
+//     return "red";
+//   } else {
+//      return " rgba(63, 63, 63, 1)"
+      
+//     }
+//   };
+
+
+ export const InputContainer = styled.input<InputErrorProps>`
  display: flex;
 flex-direction: column;
 justify-content: center;
 outline : none;
-border: 1px solid rgba(63, 63, 63, 1);
+border: 2px solid ${({disabled,$error})=>(generateInput(disabled, $error))};
 border-radius : 4px;
 padding: 12px;
 height: 50px;
@@ -29,3 +54,5 @@ font-size: 16px;
   gap: 4px;
   height: 68px;
   `
+
+  

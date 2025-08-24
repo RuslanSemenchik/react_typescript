@@ -1,38 +1,30 @@
+import "./styles.css";
+import { CardAutoComponent, CardTitle, CardInfo } from "./styles";
 
-import './styles.css'
-import {CardAutoComponent,CardTitle,CardInfo} from "./styles";
-
-interface CarComponent{
-     brand: string;
-     price: number;
-     isDiesel: boolean;
-
+interface CarComponent {
+  brand: string;
+  price: number;
+  isDiesel: boolean;
 }
-function CardAuto (
-
-  { brand = "", price = 0, isDiesel  }:CarComponent
-  
-  ) {
+function CardAuto({ brand = "", price = 0, isDiesel }: CarComponent) {
   return (
     <CardAutoComponent>
-
-        <CardInfo>
+      <CardInfo>
         <CardTitle>Brand: </CardTitle>
         {brand}
       </CardInfo>
-      
+
       <CardInfo>
         <CardTitle>Price: </CardTitle>
         {price}
       </CardInfo>
-      
+
       <CardInfo>
         <CardTitle>IsDiesel: </CardTitle>
         {isDiesel ? "Yes" : "No"}
       </CardInfo>
-    
     </CardAutoComponent>
   );
 }
 
-export default CardAuto
+export default CardAuto;
