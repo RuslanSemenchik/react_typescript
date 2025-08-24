@@ -4,25 +4,18 @@ import styled from "@emotion/styled";
 interface InputErrorProps {
     $error : string | undefined;
 }
-
+let error;
 const generateInput = (disabled: boolean|undefined, error: string|undefined) => {
   if (disabled) {
     return "#acacacff";
-  } else if (error === "Some error") {
+  } else if (typeof error === "string") {
     return "red";
   } else {
      return " rgba(63, 63, 63, 1)"  
     }
   };
 
-// const generateInputError = (error : string|undefined) => {
-//   if (error === "Some error") {
-//     return "red";
-//   } else {
-//      return " rgba(63, 63, 63, 1)"
-      
-//     }
-//   };
+
 
 
 export const InputContainer = styled.input<InputErrorProps>`

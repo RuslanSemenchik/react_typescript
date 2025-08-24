@@ -53,7 +53,7 @@ return <PageWrapper>
         name="input_02"
         label="error"
         placeholder="error"
-        error= "Some error"
+        error= "error"
         
 />
 
