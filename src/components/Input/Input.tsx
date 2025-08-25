@@ -1,5 +1,5 @@
 
-import{InputContainer,LoginFormLabel,LoginFormInputContainer} from  "./styles"
+import{InputContainer,LoginFormLabel,LoginFormInputContainer,ErrorText} from  "./styles"
 import { type InputProps } from './types';
 
 function Input({
@@ -9,7 +9,9 @@ function Input({
   placeholder = "Enter your...",
   label,
   disabled = false,
-  error } : InputProps ) {
+  error,
+  value,
+  onChange } : InputProps ) {
     return <LoginFormInputContainer > 
            <LoginFormLabel htmlFor={id}>{label}</LoginFormLabel>
             <InputContainer
@@ -19,7 +21,11 @@ function Input({
             placeholder= {placeholder}
             disabled = {disabled}
             $error = {error}
+            value={value}
+            onChange={onChange}
           />  
+
+          {!!error && <ErrorText>{error}</ErrorText>}
            </LoginFormInputContainer>
 }
 export default Input;

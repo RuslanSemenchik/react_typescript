@@ -7,6 +7,8 @@ import Input from "components/Input/Input";
 
 
 
+
+
 function Homework_08(){
 
 
@@ -36,6 +38,16 @@ return <PageWrapper>
         />
         </ButtonControl>
 
+        <Input
+        id="simple"
+        name="simple"
+        label="simple"
+        placeholder="simple"
+      
+        
+        
+        />
+
 
       
         <Input
@@ -53,9 +65,10 @@ return <PageWrapper>
         name="input_02"
         label="error"
         placeholder="error"
-        error= "error"
+        error = "Network error"
         
 />
+
 
 
 

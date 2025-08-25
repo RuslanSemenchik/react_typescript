@@ -18,7 +18,7 @@ display: flex;
 
 `
  export const Title_loginForm = styled.p`
-display: flex;
+    display: flex;
     justify-content: left;
     width: 471;
     height: 24;

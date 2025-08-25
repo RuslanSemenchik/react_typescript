@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 interface InputErrorProps {
     $error : string | undefined;
 }
-let error;
+
 const generateInput = (disabled: boolean|undefined, error: string|undefined) => {
   if (disabled) {
     return "#acacacff";
@@ -48,5 +48,9 @@ font-size: 16px;
   height: 68px;
 
   `
+export const ErrorText = styled.div`
+height: 18px;
+font-size: 16px;
+color: red;
 
-  
+`
