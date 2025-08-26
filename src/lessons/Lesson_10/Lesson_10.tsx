@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { PageWrapper, InputButtonContainer } from "./styles";
+import {
+  PageWrapper,
+  InputButtonContainer,
+  Container,
+  Header,
+  InputWrapper,
+  ButtonWrapper,
+  ErrorMessage,
+  UniCardWrapper,
+} from "./styles";
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
 import UniCard from "components/UniCard/UniCard";
@@ -49,34 +58,40 @@ function Lesson_10() {
 
   return (
     <PageWrapper>
-      <InputButtonContainer>
-        {/* Поле ввода: контролируемое значение (value) + onChange обновляет state */}
-        <Input
-          id="countryInput"
-          name="country"
-          type="text"
-          label="Country"
-          placeholder="Enter Country for searching universities"
-          value={country} // текущее значение из state
-          onChange={(e) => setCountry(e.target.value)} // пишем в state при каждом вводе
-        />
-        {/* Кнопка запуска действия. По клику вызываем handleGetClick */}
-        <Button
-          type="button"
-          buttonName="Get Universities"
-          onClick={handleGetClick}
-        />
-      </InputButtonContainer>
-      <div>
-        {uniArray.map((uni: UniCardType) => (
-          <UniCard 
-          key={v4()} 
-          name={uni.name} 
-          webPage={uni.web_pages[0]} />
-        ))}
-      </div>
-
-     
+      <Container>
+        <Header>
+          <h1>University Search</h1>
+          <p>Find universities by country name</p>
+        </Header>
+        <InputButtonContainer>
+          {/* Поле ввода: контролируемое значение (value) + onChange обновляет state */}
+          <InputWrapper>
+            <Input
+              id="countryInput"
+              name="country"
+              type="text"
+              label="Country"
+              placeholder="Enter Country for searching universities"
+              value={country} // текущее значение из state
+              onChange={(e) => setCountry(e.target.value)} // пишем в state при каждом вводе
+            />
+          </InputWrapper>
+          {/* Кнопка запуска действия. По клику вызываем handleGetClick */}
+          <ButtonWrapper>
+            <Button
+              type="button"
+              buttonName="Get Universities"
+              onClick={handleGetClick}
+            />
+          </ButtonWrapper>
+        </InputButtonContainer>
+        {error && <ErrorMessage>Error: {error}</ErrorMessage>}
+        <UniCardWrapper>
+          {uniArray.map((uni: UniCardType) => (
+            <UniCard key={v4()} name={uni.name} webPage={uni.web_pages[0]} />
+          ))}
+        </UniCardWrapper>
+      </Container>
     </PageWrapper>
   );
 }
