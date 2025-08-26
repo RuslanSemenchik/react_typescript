@@ -48,15 +48,11 @@ function Lesson_10() {
       setUniArray(data);
       console.log(data);
     } catch (error: any) {
-      // setJoke(`${data.setup} ${data.punchline}`);
-
-      // тут пишем логику, когда нам пришла шутка(статус промиса fullfiled)
-      // setJoke(`${data.setup} ${data.punchline}`);
-      // тут пишем логику, когда нам пришла ошибка(статус промиса rejected)
+      
       console.log(error);
       setError(error.message);
     } finally {
-      // setIsDisabled(false);
+   
     }
   };
 
