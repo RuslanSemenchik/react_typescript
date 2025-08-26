@@ -1,26 +1,5 @@
 import styled from "@emotion/styled";
 
-// export const PageWrapper = styled.div`
-//   display: flex;
-//   flex: 1;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: rgba(0, 10, 66, 0.9);
-//   gap:30px;
-// `;
-// export const InputButtonContainer = styled.div`
-
-//    display: flex;
-  
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: rgba(0, 10, 66, 0.9);
- 
-
-// `
-
 export const PageWrapper = styled.div`
   display: flex;
   flex: 1;
@@ -78,6 +57,7 @@ export const ButtonWrapper = styled.div`
 `;
 export const UniCardWrapper = styled.div`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
@@ -91,7 +71,8 @@ export const Card = styled.div`
 `;
 export const ErrorMessage = styled.div`
   text-align: center;
-  color: #FF6666;
-  font-size: 18px;
+  color: #7e1717ff;
+  font-size: 24px;
+  font-weight: bold;
   margin: 20px;
 `;

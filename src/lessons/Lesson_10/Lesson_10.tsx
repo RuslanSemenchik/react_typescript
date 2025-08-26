@@ -29,7 +29,10 @@ function Lesson_10() {
   const handleGetClick = async () => {
     const query = country.trim();
     // Если поле пустое, то выходим и запрос не формируем.
-    if (!query) return;
+    if (!query) {
+      setError("Укажите страну поиска");
+      return;
+    }
 
     const url = buildUniversitiesUrl(query);
     // Пока просто выводится адрес в консоль. Это проверка, что всё собралось верно. Далее этот момент можно убрать или изменить.
@@ -39,6 +42,9 @@ function Lesson_10() {
     try {
       const response = await axios.get(url);
       const data = response.data.slice(0, 16);
+      if(data.length===0){
+         setError("По вашему запросу университеты не найдены");
+      }
       setUniArray(data);
       console.log(data);
     } catch (error: any) {
