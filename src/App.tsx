@@ -10,6 +10,7 @@ import GlobalStyles from 'styles/GlobalStyles'
 // import Homework_09 from 'homeworks/Homework_09/Homework_09'
 // import Lesson_09 from 'lessons/Lesson_09/Lesson_09'
 import Lesson_10 from 'lessons/Lesson_10/Lesson_10'
+// import Test from 'homeworks/Test/Test'
 
 function App() {
   return <>
@@ -26,7 +27,7 @@ function App() {
       {/* <Homework_09/> */}
 
      <Lesson_10/>
-
+{/* <Test /> */}
 
   </>
   

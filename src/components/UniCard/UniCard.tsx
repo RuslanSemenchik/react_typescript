@@ -4,9 +4,11 @@ import { type UniCardProps } from "./types";
 function UniCard({ name = "", webPage = "" }: UniCardProps) {
   return (
     <UniCardComponent>
-      
+    
         <CardTitle>{name} </CardTitle>
         <CardInfo> {webPage} </CardInfo>
+        
+
     </UniCardComponent>
   );
 }
