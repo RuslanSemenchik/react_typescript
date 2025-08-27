@@ -78,7 +78,7 @@ function Lesson_10() {
               onChange={(e) => setCountry(e.target.value)} // пишем в state при каждом вводе
             />
           </InputWrapper>
-          {/* Кнопка запуска действия. По клику вызываем handleGetClick */}
+         
           <ButtonWrapper>
             <Button buttonName="Get Universities" onClick={handleGetClick} />
           </ButtonWrapper>
