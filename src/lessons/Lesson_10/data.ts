@@ -1,10 +1,6 @@
 // Неизменная API ссылка, к которой позже добавляется параметр country.
 export const UNIVERSITIES_API = "http://universities.hipolabs.com/search";
 
-// Переменная для хранения последнего собранного URL.
-// Она нужна, чтобы всегда имелся доступ к последнему использованному адресу, даже без передачи его через props или state.
-export let LAST_URL = "";
-
 /**
  * Функция собирает полный URL для запроса университетов по стране.
  * countryRaw это исходная строка с названием страны (то, что ввёл пользователь).
@@ -19,10 +15,7 @@ export function buildUniversitiesUrl(countryRaw: string): string {
   // Например: "United States" -> "United%20States"
   const url = `${UNIVERSITIES_API}?country=${encodeURIComponent(country)}`;
 
-  // Сохранение последнего сформированного URL в глобальную переменную LAST_URL, для того
-  // чтобы команда могла его использовать в других частях приложения.
-  LAST_URL = url;
-
+  
   // Как итог собранный URL возвращается, чтобы использовать его сразу же (например, в axios.get) и так далее.
   return url;
 }

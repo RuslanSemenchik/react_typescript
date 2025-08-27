@@ -37,7 +37,7 @@ font-size: 16px;
   font-size: 18px;
   font-weight: 400;
   padding: 1px;
-  color: rgba(111, 111, 111, 1);
+  color: rgba(40, 38, 38, 1);
   height: 24px;
 
  `

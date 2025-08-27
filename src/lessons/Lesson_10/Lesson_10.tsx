@@ -8,6 +8,7 @@ import {
   ButtonWrapper,
   ErrorMessage,
   UniCardWrapper,
+  
 } from "./styles";
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
@@ -30,9 +31,9 @@ function Lesson_10() {
     const query = country.trim();
     // Если поле пустое, то выходим и запрос не формируем.
     if (!query) {
-      setError("Укажите страну поиска");
       return;
     }
+    setError(undefined);
 
     const url = buildUniversitiesUrl(query);
     // Пока просто выводится адрес в консоль. Это проверка, что всё собралось верно. Далее этот момент можно убрать или изменить.
@@ -41,18 +42,17 @@ function Lesson_10() {
 
     try {
       const response = await axios.get(url);
-      const data = response.data.slice(0, 16);
-      if(data.length===0){
-         setError("По вашему запросу университеты не найдены");
+      const data = response.data.slice(0, 15);
+      if (data.length === 0) {
+        setError("No universities found matching your request");
       }
       setUniArray(data);
       console.log(data);
     } catch (error: any) {
-      
       console.log(error);
       setError(error.message);
     } finally {
-   
+      ;
     }
   };
 
@@ -80,11 +80,7 @@ function Lesson_10() {
           </InputWrapper>
           {/* Кнопка запуска действия. По клику вызываем handleGetClick */}
           <ButtonWrapper>
-            <Button
-              type="button"
-              buttonName="Get Universities"
-              onClick={handleGetClick}
-            />
+            <Button buttonName="Get Universities" onClick={handleGetClick} />
           </ButtonWrapper>
         </InputButtonContainer>
         {error && <ErrorMessage>Error: {error}</ErrorMessage>}

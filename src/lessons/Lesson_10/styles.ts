@@ -59,13 +59,17 @@ export const ButtonWrapper = styled.div`
   color: aliceblue;
   display: flex;
   justify-content: center;
-  width: 100%;
+   width: 470px;
+  
+  
+  `
 
-  button {
+
+export const ButtonControl = styled.div`
     width: auto;
     min-width: 200px;
     max-width: 100%;
-  }
+
 `;
 
 export const UniCardWrapper = styled.div`
@@ -76,44 +80,6 @@ export const UniCardWrapper = styled.div`
   width: 100%;
 `;
 
-export const Card = styled.div`
-  background: white;
-  color: #452c2cff;
-  padding: 16px;
-  border-radius: 12px;
-  width: 260px;
-  box-sizing: border-box;
-  max-height: 200px;
-  overflow-y: auto;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  h3,
-  a {
-    min-width: 0;
-  }
-
-  h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  a {
-    font-size: 14px;
-    color: #1f27f5;
-    text-decoration: none;
-    display: block;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    white-space: normal;
-  }
-`;
 
 export const ErrorMessage = styled.div`
   text-align: center;
