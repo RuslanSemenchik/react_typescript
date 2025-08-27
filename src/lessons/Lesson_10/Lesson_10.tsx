@@ -21,7 +21,7 @@ import { type UniCardType } from "./types";
 import { buildUniversitiesUrl } from "./data";
 
 function Lesson_10() {
-  // Локальное состояние для ввода страны пользователем.
+
   const [country, setCountry] = useState<string>("");
   const [error, setError] = useState<string | undefined>(undefined);
   const [uniArray, setUniArray] = useState<UniCardType[]>([]);
@@ -36,9 +36,9 @@ function Lesson_10() {
     setError(undefined);
 
     const url = buildUniversitiesUrl(query);
-    // Пока просто выводится адрес в консоль. Это проверка, что всё собралось верно. Далее этот момент можно убрать или изменить.
+    
     console.log("Lesson_10 formed url:", url);
-    // Здесь нужно будет поработать над axios и дальнейшей обработкой данных и/или ошибок.
+   
 
     try {
       const response = await axios.get(url);
@@ -66,7 +66,7 @@ function Lesson_10() {
           <p>Find universities by country name</p>
         </Header>
         <InputButtonContainer>
-          {/* Поле ввода: контролируемое значение (value) + onChange обновляет state */}
+          
           <InputWrapper>
             <Input
               id="countryInput"
