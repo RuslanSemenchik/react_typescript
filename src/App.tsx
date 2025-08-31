@@ -12,6 +12,7 @@ import GlobalStyles from 'styles/GlobalStyles'
 import Lesson_10 from 'lessons/Lesson_10/Lesson_10'
 
 import Lesson_11 from 'lessons/Lesson_11/Lesson_11'
+import Homework_11 from 'homeworks/Homework_11/Homework_11'
 
 function App() {
   return <>
@@ -29,7 +30,9 @@ function App() {
 
      {/* <Lesson_10/> */}
 
-    <Lesson_11/>
+    {/* <Lesson_11/> */}
+    <Homework_11/>
+    
 
   </>
   
