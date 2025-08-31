@@ -23,8 +23,8 @@ export const CardTitle = styled.p`
   font-weight: bold;
 
 `
-export const CardInfo = styled.p`
+export const CardInfo = styled.a`
   font-size: 18px;
   color: black;
-
+text-decoration :none
 `

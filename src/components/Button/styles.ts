@@ -39,6 +39,7 @@ const generateButtonColorOnHover = (
  align-items: center;
  justify-content: center;
  outline : none;
+ border: 1px solid black;
  border-radius : 4px;
  height: 70px;
  width: 100%;

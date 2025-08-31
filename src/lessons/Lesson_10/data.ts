@@ -13,7 +13,7 @@ export function buildUniversitiesUrl(countryRaw: string): string {
   // Формирование строки URL путем добавления к базовому адресу параметра ?country=<название страны>.
   // encodeURIComponent гарантирует, что пробелы и спецсимволы превратятся в корректный формат URL.//
   // Например: "United States" -> "United%20States"
-  const url = `${UNIVERSITIES_API}?country=${encodeURIComponent(country)}`;
+  const url = `${UNIVERSITIES_API}?country=${country}`;
 
   
   // Как итог собранный URL возвращается, чтобы использовать его сразу же (например, в axios.get) и так далее.
