@@ -1,5 +1,6 @@
 export interface UniCardProps {
   name: string;
-  webPage: string;
+  webPage: string [];
+  href? :string
 
 }

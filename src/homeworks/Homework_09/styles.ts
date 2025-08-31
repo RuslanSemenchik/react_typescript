@@ -38,6 +38,13 @@ export const JokeContainer = styled.div`
 
 
 
+export const JokeError = styled(JokeText)`
+  
+  font-weight: bold;
+  color: red;
+`;
+
+
 
 
 
