@@ -27,10 +27,9 @@ function App() {
 
       {/* <Homework_09/> */}
 
-     <Lesson_10/>
+     {/* <Lesson_10/> */}
 
-     {/* <Lesson_11/> */}
-{/* <Test /> */}
+    <Lesson_11/>
 
   </>
   

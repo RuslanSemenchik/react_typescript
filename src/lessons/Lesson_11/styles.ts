@@ -6,5 +6,5 @@ export const PageWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(241, 242, 244, 0.9);
+  background-color: rgba(37, 45, 61, 0.9);
 `;
