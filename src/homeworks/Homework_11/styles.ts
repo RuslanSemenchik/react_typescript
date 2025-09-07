@@ -9,4 +9,5 @@ justify-content: center;
 gap: 20px;
 background-color:  rgba(104, 96, 96, 0.52);
 
+
 `

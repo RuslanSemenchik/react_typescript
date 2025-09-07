@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { LOGIN_FORM_VALUES } from "./types";
 
-function ContactUs() {
+function ContactUsForm() {
   const validationSchema = Yup.object().shape({
     [LOGIN_FORM_VALUES.FULLNAME]: Yup.string()
       .required("Full name field is required")
@@ -74,4 +74,4 @@ function ContactUs() {
     </ContactUs_component>
   );
 }
-export default ContactUs;
+export default ContactUsForm;
