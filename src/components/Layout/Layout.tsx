@@ -65,6 +65,13 @@ const navigate = useNavigate();
             })}
             
             to ="/login">Login</HeaderLink>
+
+            <HeaderLink 
+            style={({isActive})=>({
+                fontWeight: isActive ? "bold": "normal",
+                textDecoration : isActive? "underline" : "none"
+            })}
+            to = "/clients">Clients</HeaderLink>
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
@@ -80,6 +87,7 @@ const navigate = useNavigate();
             <FooterLink to ="/contactUs">Contact Us</FooterLink>
             <FooterLink to ="/about">About</FooterLink>
             <FooterLink to ="/Login">Login</FooterLink>
+            <FooterLink to ="/Clients">Clients</FooterLink>
         </FooterNavigation>
 
 
