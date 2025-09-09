@@ -5,6 +5,7 @@ import Home from 'pages/EmployeeApp/Home/Home'
 import ContactUs from 'pages/EmployeeApp/ContactUs/ContactUs'
 import About from 'pages/EmployeeApp/About/About'
 import LogIn from 'pages/EmployeeApp/LogIn/LogIn'
+import Clients from 'pages/EmployeeApp/Clients/Clients'
 
 // import Homework_06 from "homeworks/Homework_06/Homework_06"
 // import Homework_07 from 'homeworks/Homework_07/Homework_07'
@@ -20,6 +21,9 @@ import Lesson_10 from 'lessons/Lesson_10/Lesson_10'
 import Lesson_11 from 'lessons/Lesson_11/Lesson_11'
 import Homework_11 from 'homeworks/Homework_11/Homework_11'
 import Layout from 'components/Layout/Layout'
+import Apple from 'pages/EmployeeApp/Clients/Apple/Apple'
+import Audi from 'pages/EmployeeApp/Clients/Audi/Audi'
+import Wargaming from 'pages/EmployeeApp/Clients/Wargaming/Wargaming'
 
 function App() {
   return <BrowserRouter>
@@ -32,6 +36,10 @@ function App() {
     <Route  path ="/contactUs" element ={<ContactUs/>}  />
     <Route  path ="/about" element ={<About/>}  />
     <Route  path ="/login" element ={<LogIn/>}  />
+    <Route  path = "/clients" element = {<Clients/>} />
+    <Route  path = "/clients/apple" element = {<Apple/>} />
+    <Route  path = "/clients/audi" element = {<Audi/>} />
+    <Route  path = "/clients/wargaming" element = {<Wargaming/>} />
     <Route  path="*" element = "Page not found"/>
    </Routes>
    </Layout>
