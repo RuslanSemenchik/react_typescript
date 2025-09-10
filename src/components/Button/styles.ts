@@ -41,7 +41,7 @@ const generateButtonColorOnHover = (
  outline : none;
  border: 1px solid black;
  border-radius : 4px;
- height: 100%;
+ height: 50px;
  width: 100%;
  background-color: ${({$isRed, disabled})=> 
     generateButtonColor($isRed,disabled)} ;

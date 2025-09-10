@@ -11,9 +11,12 @@ import {
   FooterLink,
   FooterLogo,
   FooterNavigation,
+  navlinkProps
 } from "./styles";
 import type { LayoutProps } from "./types";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import { NAVIGATION_MENU_ROUTES } from "constants/routes";
+import { v4 } from "uuid";
 
 function Layout({children}: LayoutProps) {
 const navigate = useNavigate();
@@ -21,8 +24,29 @@ const navigate = useNavigate();
     const goToHomePage = ()=>{
         navigate("/");
     }
+    
 
+  const headerLinks = Object.keys(NAVIGATION_MENU_ROUTES).map((route) => {
+      return(
+      <HeaderLink 
+      key={v4()} 
+      to ={NAVIGATION_MENU_ROUTES[route as keyof typeof NAVIGATION_MENU_ROUTES]}
+      style = {({isActive})=> navlinkProps(isActive)}
+      >
+      {route}
+      </HeaderLink> 
+    )}
+    )
 
+    const footerLinks = Object.keys(NAVIGATION_MENU_ROUTES).map((route) => {
+      return(
+      <FooterLink 
+      key={v4()} 
+      to ={NAVIGATION_MENU_ROUTES[route as keyof typeof NAVIGATION_MENU_ROUTES]}>
+        {route}
+      </FooterLink> 
+    )}
+    )
 
 
 
@@ -37,41 +61,7 @@ const navigate = useNavigate();
             />
         </Logo>
         <NavigationContainer>
-            <HeaderLink 
-            style = {({isActive})=> ({
-                fontWeight: isActive ? "bold": "normal",
-                textDecoration : isActive? "underline" : "none"
-
-            })}to ="/">Home</HeaderLink>
-            <HeaderLink 
-             style = {({isActive})=> ({
-                fontWeight: isActive ? "bold": "normal",
-                textDecoration : isActive? "underline" : "none"
-
-            })}
-            to ="/contactUs">Contact Us</HeaderLink>
-            <HeaderLink 
-             style = {({isActive})=> ({
-                fontWeight: isActive ? "bold": "normal",
-                textDecoration : isActive? "underline" : "none"
-
-            })}
-            to ="/about">About</HeaderLink>
-            <HeaderLink 
-             style = {({isActive})=> ({
-                fontWeight: isActive ? "bold": "normal",
-                textDecoration : isActive? "underline" : "none"
-
-            })}
-            
-            to ="/login">Login</HeaderLink>
-
-            <HeaderLink 
-            style={({isActive})=>({
-                fontWeight: isActive ? "bold": "normal",
-                textDecoration : isActive? "underline" : "none"
-            })}
-            to = "/clients">Clients</HeaderLink>
+           {headerLinks}
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
@@ -83,11 +73,7 @@ const navigate = useNavigate();
             />
         </FooterLogo>
         <FooterNavigation>
-            <FooterLink to ="/">Home</FooterLink>
-            <FooterLink to ="/contactUs">Contact Us</FooterLink>
-            <FooterLink to ="/about">About</FooterLink>
-            <FooterLink to ="/Login">Login</FooterLink>
-            <FooterLink to ="/Clients">Clients</FooterLink>
+            {footerLinks}
         </FooterNavigation>
 
 

@@ -1,38 +1,32 @@
-import {
-  PageWrapper,
-  Container,
-  NaviTitle,
-  InfoText,
-  ButtonControl,
-} from "./styles";
-import Button from "components/Button/Button";
-import { useNavigate } from "react-router-dom";
+import ClientTemplate from "components/ClientTemplate/ClientTemplate";
 
-function Wargaming() {
-  const navigation = useNavigate();
-  const goBack = () => {
-    navigation(-1);
-  };
+function Wargaming (){
   return (
-    <PageWrapper>
-      <Container>
-        <NaviTitle href="https://www.wargaming.net/" target="_blank">
-          Wargaming
-        </NaviTitle>
-        <InfoText>
-          Wargaming — частная компания, издатель и разработчик компьютерных игр
-          преимущественно free-to-play ММО-жанра и околоигровых сервисов для
-          разных платформ. Штаб-квартира располагается в Никосии, Республика
-          Кипр[5], центры разработок — в Киеве, Сиэтле, Чикаго, Балтиморе,
-          Сиднее, Хельсинки, Остине, Праге и Вильнюсе. Официальным партнёром
-          компании является Wargaming Public Co. Limited — кипрская
-          компания-дистрибьютор, основанная Виктором Кислым 26 июля 2011 года
-        </InfoText>
-      </Container>
-      <ButtonControl>
-        <Button buttonName="Go back" onClick={goBack} />
-      </ButtonControl>
-    </PageWrapper>
+    <ClientTemplate href="https://www.wargaming.net/" clientName="Wargaming">
+     Audi AG — немецкая
+          автомобилестроительная компания в составе концерна Volkswagen Group,
+          специализирующаяся на выпуске автомобилей под маркой Audi.
+          Штаб-квартира расположена в городе Ингольштадт (Германия). 
+          Девиз — Vorsprung durch Technik. 
+          Объём производства в 2016 году составил около 1 903 259 автомобилей.
+    </ClientTemplate>
   );
 }
-export default Wargaming;
+export default Wargaming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

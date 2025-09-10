@@ -24,25 +24,30 @@ import Layout from 'components/Layout/Layout'
 import Apple from 'pages/EmployeeApp/Clients/Apple/Apple'
 import Audi from 'pages/EmployeeApp/Clients/Audi/Audi'
 import Wargaming from 'pages/EmployeeApp/Clients/Wargaming/Wargaming'
+import{ MENU_ROUTES }from "constants/routes"
+ import Lesson_13 from 'lessons/Lesson_13/Lesson_13'
+import Lesson_06 from 'lessons/Lesson_06/Lesson_06'
 
 function App() {
   return <BrowserRouter>
    <GlobalStyles/>
    
 
+
+{/* 
    <Layout>
     <Routes>
-    <Route  path ="/" element ={<Home/>}  />
-    <Route  path ="/contactUs" element ={<ContactUs/>}  />
-    <Route  path ="/about" element ={<About/>}  />
-    <Route  path ="/login" element ={<LogIn/>}  />
-    <Route  path = "/clients" element = {<Clients/>} />
-    <Route  path = "/clients/apple" element = {<Apple/>} />
-    <Route  path = "/clients/audi" element = {<Audi/>} />
-    <Route  path = "/clients/wargaming" element = {<Wargaming/>} />
-    <Route  path="*" element = "Page not found"/>
+    <Route  path ={MENU_ROUTES.HOME} element ={<Home/>}  />
+    <Route  path ={MENU_ROUTES.CONTACT_US} element ={<ContactUs/>}  />
+    <Route  path ={MENU_ROUTES.ABOUT} element ={<About/>}  />
+    <Route  path ={MENU_ROUTES.LOGIN} element ={<LogIn/>}  />
+    <Route  path = {MENU_ROUTES.CLIENTS} element = {<Clients/>} />
+    <Route  path = {MENU_ROUTES.APPLE} element = {<Apple/>} />
+    <Route  path = {MENU_ROUTES.AUDI} element = {<Audi/>} />
+    <Route  path = {MENU_ROUTES.WARGAMING} element = {<Wargaming/>} />
+    <Route  path={MENU_ROUTES.NOT_FOUND} element = "Page not found"/>
    </Routes>
-   </Layout>
+   </Layout> */}
 
 
     {/* <Lesson_06/> */}
@@ -60,7 +65,7 @@ function App() {
 
     {/* <Lesson_11/> */}
     {/* <Homework_11/> */}
-    
+    <Lesson_13/>
 
   </BrowserRouter>
   

@@ -85,3 +85,8 @@ export const FooterLink = styled(Link)`
   font-size: 14px;
   font-weight: bold;
 `;
+
+export const navlinkProps = (isActive: boolean) => ({
+                fontWeight: isActive ? "bold": "normal",
+                textDecoration : isActive? "underline" : "none"
+            })

@@ -36,5 +36,6 @@ export const InfoText = styled.p`
 
 export const ButtonControl = styled.div`
   width: 120px;
+  height: 60px;
 
 `;
