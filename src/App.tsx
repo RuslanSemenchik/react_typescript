@@ -18,6 +18,7 @@ import Clients from 'pages/EmployeeApp/Clients/Clients'
 // import Lesson_09 from 'lessons/Lesson_09/Lesson_09'
 import Lesson_10 from 'lessons/Lesson_10/Lesson_10'
 
+
 import Lesson_11 from 'lessons/Lesson_11/Lesson_11'
 import Homework_11 from 'homeworks/Homework_11/Homework_11'
 import Layout from 'components/Layout/Layout'
@@ -27,6 +28,7 @@ import Wargaming from 'pages/EmployeeApp/Clients/Wargaming/Wargaming'
 import{ MENU_ROUTES }from "constants/routes"
  import Lesson_13 from 'lessons/Lesson_13/Lesson_13'
 import Lesson_06 from 'lessons/Lesson_06/Lesson_06'
+import Homework_13 from 'homeworks/Homework_13/Homework_13'
 
 function App() {
   return <BrowserRouter>
@@ -65,8 +67,8 @@ function App() {
 
     {/* <Lesson_11/> */}
     {/* <Homework_11/> */}
-    <Lesson_13/>
-
+    {/* <Lesson_13/> */}
+    <Homework_13/>
   </BrowserRouter>
   
 }
